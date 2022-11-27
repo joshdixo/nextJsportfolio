@@ -1,0 +1,39 @@
+.nav {
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 100px;
+  box-shadow: rgb(0 23 55 / 5%) 0px 4px 16px 0px;
+  opacity: 1;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  position: sticky;
+  top: 24px;
+  margin: 0 auto;
+  padding: 0 4px;
+
+  .avatar {
+    background: #ffe900;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-self: center;
+
+    &Img {
+      background: red;
+    }
+  }
+
+  &Item {
+    border-radius: 50%;
+    color: black;
+    padding: 0 16px;
+
+    a{
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
