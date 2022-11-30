@@ -19,9 +19,9 @@ const Nav = () => {
 
     return (
         <div className={styles.nav}>
-            <div className={styles.avatar}>
-                <Link href={'/'}><img src='/public/vercel.svg'/></Link>
-            </div>
+            {/* <div className={styles.avatar}>
+                <Link href={'/'}><img src='./public/vercel.svg'/></Link>
+            </div> */}
             {links.map((link) => (
                 <div className={styles.navItem}>
                     <Link 

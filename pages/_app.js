@@ -1,14 +1,14 @@
-import { AnimateSharedLayout } from "framer-motion";
+import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import '../styles/globals.scss'
 import Nav from "../components/Nav";
 
 function MyApp({ Component, pageProps }) {
 
   return (
-      <AnimateSharedLayout>
+      <AnimatePresence>
         <Nav />
         <Component {...pageProps} />
-      </AnimateSharedLayout>
+      </AnimatePresence>
   )
 }
 
