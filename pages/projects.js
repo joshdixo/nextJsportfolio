@@ -1,13 +1,10 @@
 import { motion } from 'framer-motion';
 import styles from '../styles/Projects.module.scss';
+import Layout from '../components/Layout';
 
 const Projects = () => {
     return (
-    <motion.div
-    initial={{opacity: 0, y: 20}}
-    animate={{opacity: 1, y: 0, transition: { delay: 0.25 }}}
-    exit={{opacity: 0, y: 20}}
-    className="main">
+        <Layout>
         <div className="container">
             <h1>Projects</h1>
 
@@ -69,7 +66,7 @@ const Projects = () => {
                 </div>
             </div>
         </div>
-    </motion.div>
+        </Layout>
     )}
 
 export default Projects;

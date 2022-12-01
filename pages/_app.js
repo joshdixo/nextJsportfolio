@@ -1,15 +1,22 @@
-import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import '../styles/globals.scss'
 import Nav from "../components/Nav";
+import { usePathname } from 'next/navigation';
 
 function MyApp({ Component, pageProps }) {
 
   return (
-      <AnimatePresence>
+      <>
         <Nav />
-        <Component {...pageProps} />
+        <AnimatePresence
+          exitBeforeEnter
+          initial={false}
+          onExitComplete={() => window.scrollTo(0, 0)}
+        >
+        <Component {...pageProps} key={usePathname} />
       </AnimatePresence>
+      </>
   )
 }
 
-export default MyApp
+export default MyApp;

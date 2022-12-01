@@ -27,6 +27,10 @@ body {
   margin: 0 auto;
 }
 
+section {
+  margin: 4em 0;
+}
+
 @media (max-width: 760px) {
   .container {
     padding: 0 1rem;
