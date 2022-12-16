@@ -1,16 +1,24 @@
-
-
-
-//@media (max-width: 600px) {
-//  .grid {
-//    width: 100%;
-//    flex-direction: column;
-//  }
-//}
-
+// Media Queries
+@mixin screen($size) {
+    @if $size == mobile {
+      @media (max-width: 599px) { @content; }
+    } @else if $size == tablet {
+      @media (min-width: 600px) { @content; }
+    } @else if $size == tabletAll {
+      @media (min-width: 900px) { @content; }
+    } @else if $size == desktopAll {
+      @media (min-width: 1200px) { @content; }
+    } @else if $size == ultraWide {
+      @media (min-width: 1800px) { @content; }
+    }
+  }
 
 .introduction {
     width: 80%;
+
+    @include screen(mobile) {
+        width: 100%;
+    }
 
     h1 {
         margin-bottom: 0;

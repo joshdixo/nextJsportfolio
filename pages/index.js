@@ -15,6 +15,13 @@ const Home = () => {
                 </p>
               </section>
 
+              {/* <section className={styles.about}>
+                <h2>About</h2>
+                <p>My interest in web development started back in 2020 when lockdown
+                  2020 provided the perfect opportunity to learn 
+                </p>
+              </section> */}
+
               <section className={styles.about}>
                 <h2>About</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 

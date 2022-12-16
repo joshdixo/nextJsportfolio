@@ -1,6 +1,131 @@
+// Media Queries
+@mixin screen($size) {
+  @if $size == mobile {
+    @media (max-width: 599px) { @content; }
+  } @else if $size == tablet {
+    @media (min-width: 600px) { @content; }
+  } @else if $size == tabletAll {
+    @media (min-width: 900px) { @content; }
+  } @else if $size == desktopAll {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == ultraWide {
+    @media (min-width: 1800px) { @content; }
+  }
+}
+
 .card {
   border-radius: 16px;
   background: white;
   padding: 8px;
   min-height: 400px;
+}
+
+.featured {
+  width: 100%;
+  // height: 22rem;
+  border-radius: 16px;
+  background: #FFDC34;
+  padding: 3rem;
+  justify-content: space-between;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+
+  .infoWrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    padding: 2rem;
+    text-align: left;
+    justify-content: center;
+
+    @include screen(mobile) {
+      text-align: center;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 4rem;
+      font-weight: 700;
+
+      @include screen(mobile) {
+        font-size: 3rem;
+      }
+    }
+
+    h4 {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: 600;
+
+      @include screen(mobile) {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      margin: 0 0 16px 0;
+    }
+
+  }
+
+  // &::before {
+  //   content: '';
+  //   background-image: url(/public/images/projects/collectingcars.png);
+  //   position: absolute;
+  //   width: 1000px;
+  //   height: 40px;
+  //   z-index: 5;
+  // }
+
+  .moreInfoWrapper {
+    z-index: 5;
+    position: relative;
+    max-width: 40ch;
+    padding: 16px 16px 32px 16px;
+
+    h5 {
+      margin: 0;
+    }
+  }
+
+  .cta {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1rem;
+    z-index: 2;
+  }
+
+  .edgeImage {
+    display: block;
+    position: absolute;
+    content: '';
+    right: 2rem;
+    top: 5rem;
+    height: 590px;
+    width: auto;
+    max-width: 60%;
+    z-index: 2;
+
+    @include screen(tablet) {
+      right: calc(100% + -90rem);
+    }
+
+    @include screen(mobile) {
+      display: none;
+    }
+
+    img {
+      object-fit: cover;
+      width: auto;
+      height: 100%;
+      border-radius: 6px;
+      box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+    }
+  }
 }

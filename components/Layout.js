@@ -12,7 +12,7 @@ const Layout = ({ children }) => (
         <motion.main
             initial="hidden"
             animate="enter"
-            exit
+            exit="exit"
             variants={variants}
             transition={{ type: 'linear', duration: 0.3 }}
             className="main"
