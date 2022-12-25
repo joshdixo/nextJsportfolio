@@ -1,15 +1,22 @@
 import { motion } from "framer-motion";
 import Layout from "../components/Layout";
+import Head from "next/head";
 
 const Resume = () => {
     return (
-        <Layout>
-            <div className="container">
-                <h1>Resume</h1>
+        <>
+            <Head>
+                <title>Resume | Josh Dixon</title>
+            </Head>
+            <Layout>
+                <div className="container">
+                    <h1>Resume</h1>
 
-             
-            </div>
+
+                </div>
             </Layout>
-    )}
+        </>
+    )
+}
 
 export default Resume;

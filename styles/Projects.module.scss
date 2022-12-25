@@ -1,15 +1,33 @@
 // Media Queries
 @mixin screen($size) {
-  @if $size == mobile {
-    @media (max-width: 599px) { @content; }
-  } @else if $size == tablet {
-    @media (min-width: 600px) { @content; }
-  } @else if $size == tabletAll {
-    @media (min-width: 900px) { @content; }
-  } @else if $size == desktopAll {
-    @media (min-width: 1200px) { @content; }
-  } @else if $size == ultraWide {
-    @media (min-width: 1800px) { @content; }
+  @if $size ==mobile {
+    @media (max-width: 599px) {
+      @content;
+    }
+  }
+
+  @else if $size ==tablet {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+
+  @else if $size ==tabletAll {
+    @media (min-width: 900px) {
+      @content;
+    }
+  }
+
+  @else if $size ==desktopAll {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @else if $size ==ultraWide {
+    @media (min-width: 1800px) {
+      @content;
+    }
   }
 }
 
@@ -88,6 +106,14 @@
     h5 {
       margin: 0;
     }
+
+    a {
+      font-weight: 700;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   .cta {
@@ -125,7 +151,7 @@
       width: auto;
       height: 100%;
       border-radius: 6px;
-      box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+      box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
     }
   }
 }
