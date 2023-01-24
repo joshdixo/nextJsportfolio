@@ -119,12 +119,22 @@
   .cta {
     font-size: 1.2rem;
     font-weight: 700;
-    margin-top: 1rem;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: 1rem;
     z-index: 2;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: rgb(0 23 55 / 5%) 0px 4px 16px 0px;
+    padding:  .5rem 1rem;
+    border-radius: 16px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: white;
+      transition: all 0.3s ease-out;
+    }
   }
 
   .edgeImage {

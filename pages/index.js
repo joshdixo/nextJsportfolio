@@ -14,8 +14,7 @@ const Home = () => {
         <div className="container">
           <section className={styles.introduction}>
             <h1>Hello, I'm Josh 👋</h1>
-            <p>I'm a Web Developer working at Collecting Cars,
-              and living in Nottingham, UK
+            <p>I'm a Front End Web Developer moving from 🇬🇧 to 🇨🇦 in April '23 and I'm searching for my next challenge.
             </p>
           </section>
 
