@@ -116,9 +116,18 @@ const Projects = () => {
                                   Watch Collecting
                                 </Link>
                                 &nbsp;are the two online auction
-                                platforms that I work on.
+                                platforms that I have worked.
                               </p>
-                              <p>I have worked on a variety of features accross the two sites</p>
+                              <p>From design through to implimentation, I have worked on a variety of features accross the two sites during my tenure including:</p>
+                              <ul>
+                                <li>Navigation</li>
+                                <li>Auction cards</li>
+                                <li>Policy pages</li>
+                                <li>Landing pages</li>
+                              </ul>
+
+                              <p>
+                              </p>
 
                             </div>
                           </motion.div>
