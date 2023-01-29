@@ -1,0 +1,15 @@
+// Media Queries
+@mixin screen($size) {
+    @if $size == mobile {
+      @media (max-width: 599px) { @content; }
+    } @else if $size == tablet {
+      @media (min-width: 600px) { @content; }
+    } @else if $size == tabletAll {
+      @media (min-width: 900px) { @content; }
+    } @else if $size == desktopAll {
+      @media (min-width: 1200px) { @content; }
+    } @else if $size == ultraWide {
+      @media (min-width: 1800px) { @content; }
+    }
+  }
+

@@ -3,6 +3,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import { motion } from 'framer-motion'
 import Layout from '../components/Layout'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Link from 'next/link'
 
 const Home = () => {
   return (
@@ -14,16 +16,37 @@ const Home = () => {
         <div className="container">
           <section className={styles.introduction}>
             <h1>Hello, I'm Josh 👋</h1>
-            <p>I'm a Front End Web Developer moving from 🇬🇧 to 🇨🇦 in April '23 and I'm searching for my next challenge.
+            <p>I'm a Front End Developer moving from 🇬🇧 to 🇨🇦 in April '23 and I'm searching for my next challenge.
             </p>
+
+            <div className={styles.links}>
+              <Link href={"https://github.com/joshdixo"} target="_blank">
+                <FontAwesomeIcon
+                  icon={["fab", "github"]}
+                />
+              </Link>
+
+              <Link href={"https://twitter.com/joshdixonphoto"} target="_blank">
+                <FontAwesomeIcon
+                  icon={["fab", "twitter"]}
+                />
+              </Link>
+
+              <Link href={"https://linkedin.com/in/joshdixon"} target="_blank">
+                <FontAwesomeIcon
+                  icon={["fab", "linkedin"]}
+                />
+              </Link>
+
+              <Link href={"https://behance.net/joshdixonphoto"} target="_blank">
+                <FontAwesomeIcon
+                  icon={["fab", "behance"]}
+                />
+              </Link>
+            </div>
+
           </section>
 
-          {/* <section className={styles.about}>
-                <h2>About</h2>
-                <p>My interest in web development started back in 2020 when lockdown
-                  2020 provided the perfect opportunity to learn 
-                </p>
-              </section> */}
 
           <section className={styles.about}>
             <h2>About</h2>

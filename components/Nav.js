@@ -30,7 +30,6 @@ const Nav = () => {
                     <Link 
                         href={link.href}
                         scroll={false}
-                    
                     >
                         {link.href === path &&
                         <motion.span
@@ -38,7 +37,7 @@ const Nav = () => {
                             className={styles.active}
                         />
                         }
-                        {link.href == "/" ? <img className="avatars" src="https://joshdixon.netlify.app/images/JoshDixon.png"/> : <span>{link.label}</span>}
+                        {link.href == "/" ? <img className="avatars" src="/images/JoshDixon.JPG"/> : <span>{link.label}</span>}
                     </Link>
                 </div>
             ))}
