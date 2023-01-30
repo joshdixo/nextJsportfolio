@@ -11,10 +11,10 @@ const Contact = () => {
                 <title>Contact | Josh Dixon</title>
             </Head>
             <Layout>
-                <div className="container">
+                <div className={styles.container}>
                     <h1>Contact</h1>
 
-                    <ContactForm className={styles.form}/>
+                    <ContactForm className={styles.form} />
                 </div>
             </Layout>
         </>

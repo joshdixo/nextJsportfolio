@@ -34,7 +34,6 @@
 .card {
   border-radius: 16px;
   background: white;
-  height: 500px;
   // padding: 8px;
 
   .image {
@@ -57,19 +56,24 @@
 
     p {
       margin: 8px 0;
+      font-size: 1.4rem;
     }
 
     .links {
       margin-top: 2rem;
       display: flex;
       flex-direction: row;
+      width: 100%;
+      gap: 16px;
 
       .buttonPrimary {
         background: #FFDC34;
         padding: .6rem 2rem;
         border-radius: 16px;
         font-weight: 700;
-        margin-right: 1rem;
+        // margin-right: 1rem;
+        width: 100%;
+        text-align: center;
 
         &:hover {
           cursor: pointer;
@@ -83,10 +87,14 @@
         padding: .6rem 1rem;
         border-radius: 16px;
         font-weight: 700;
+        outline: 2px solid #FFDC34;
+        width: 100%;
+        text-align: center;
+
 
         &:hover {
           cursor: pointer;
-          background: darken($color: #FFDC34, $amount: 10%);
+          background: darken($color: rgba(0, 0, 0, 0.055), $amount: 10%);
           transition: background .3s ease-out;
         }
       }
@@ -183,7 +191,7 @@
     backdrop-filter: blur(8px);
     background-color: rgba(255, 255, 255, 0.85);
     box-shadow: rgb(0 23 55 / 5%) 0px 4px 16px 0px;
-    padding:  .5rem 1rem;
+    padding: .5rem 1rem;
     border-radius: 16px;
 
     &:hover {

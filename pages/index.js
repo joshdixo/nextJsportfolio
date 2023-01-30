@@ -13,7 +13,7 @@ const Home = () => {
         <title>Portfolio | Josh Dixon</title>
       </Head>
       <Layout>
-        <div className="container">
+        <div className={styles.container}>
           <section className={styles.introduction}>
             <h1>Hello, I'm Josh 👋</h1>
             <p>I'm a Front End Developer moving from 🇬🇧 to 🇨🇦 in April '23 and I'm searching for my next challenge.
@@ -26,15 +26,15 @@ const Home = () => {
                 />
               </Link>
 
-              <Link href={"https://twitter.com/joshdixonphoto"} target="_blank">
-                <FontAwesomeIcon
-                  icon={["fab", "twitter"]}
-                />
-              </Link>
-
               <Link href={"https://linkedin.com/in/joshdixon"} target="_blank">
                 <FontAwesomeIcon
                   icon={["fab", "linkedin"]}
+                />
+              </Link>
+
+              <Link href={"https://twitter.com/joshdixonphoto"} target="_blank">
+                <FontAwesomeIcon
+                  icon={["fab", "twitter"]}
                 />
               </Link>
 
@@ -49,7 +49,66 @@ const Home = () => {
 
 
           <section className={styles.about}>
-            <h2>About</h2>
+            <div className={styles.grid}>
+              <div className={styles.gridCell}>
+                <div className={styles.content}>
+                  <div className={styles.icon}>
+                    <span>🎨</span>
+                  </div>
+                  <div className={styles.title}>
+                    <h3>Design</h3>
+
+                    <h5>Things I enjoy designing:</h5>
+                    <p>UX, UI, Web, Apps</p>
+
+                    <h5>Design Tools:</h5>
+                    <p>Figma</p>
+                    <p>Photoshop</p>
+                    <p>Illustrator</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.gridCell}>
+                <div className={styles.content}>
+                  <div className={styles.icon}>
+                    <span>🧑‍💻</span>
+                  </div>
+                  <div className={styles.title}>
+                    <h3>Development</h3>
+
+                    <h5>Languages I speak:</h5>
+                    <p>HTML, JavaScript, PHP</p>
+
+                    <h5>Working with:</h5>
+                    <p>React</p>
+                    <p>NextJs</p>
+                    <p>SCSS</p>
+                    <p>GitHub</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.gridCell}>
+                <div className={styles.content}>
+                  <div className={styles.icon}>
+                    <span>📸</span>
+                  </div>
+                  <div className={styles.title}>
+                    <h3>Photography</h3>
+
+                    <h5>Stats:</h5>
+                    <p>9+ years experience</p>
+                    <p>World Sports Photography Awards Finalist</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            {/* <h2>About</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Cras at diam bibendum, dictum metus quis, iaculis eros.
               Cras placerat laoreet ornare. Cras arcu est, blandit non
@@ -59,7 +118,7 @@ const Home = () => {
               sed justo facilisis, semper felis et, molestie massa. Proin dui
               ex, vulputate vel euismod at, posuere ut quam. Nam magna ipsum,
               pharetra ut nulla ut, rutrum consequat libero.
-            </p>
+            </p> */}
           </section>
         </div>
       </Layout>

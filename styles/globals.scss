@@ -1,23 +1,50 @@
 // Media Queries
 @mixin screen($size) {
-  @if $size == mobile {
-    @media (max-width: 599px) { @content; }
-  } @else if $size == tablet {
-    @media (min-width: 600px) { @content; }
-  } @else if $size == tabletAll {
-    @media (min-width: 900px) { @content; }
-  } @else if $size == desktopAll {
-    @media (min-width: 1200px) { @content; }
-  } @else if $size == ultraWide {
-    @media (min-width: 1800px) { @content; }
+  @if $size ==mobile {
+    @media (max-width: 599px) {
+      @content;
+    }
+  }
+
+  @else if $size ==tablet {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+
+  @else if $size ==tabletAll {
+    @media (min-width: 900px) {
+      @content;
+    }
+  }
+
+  @else if $size ==desktopAll {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @else if $size ==ultraWide {
+    @media (min-width: 1800px) {
+      @content;
+    }
   }
 }
 
-:root, body {
+:root,
+body {
   font-size: 62.5%;
 }
 
-html, body, p, span, input, dl, dt, dd, a {
+html,
+body,
+p,
+span,
+input,
+dl,
+dt,
+dd,
+a {
   font-size: 1.8rem;
 }
 
@@ -28,7 +55,8 @@ body {
 }
 
 html,
-body, form {
+body,
+form {
   padding: 0;
   margin: 0;
   line-height: 1.4;
@@ -117,6 +145,7 @@ section {
 
   @include screen(mobile) {
     grid-template-columns: auto;
+    gap: 32px;
   }
 
 
@@ -144,7 +173,6 @@ a {
 }
 
 body {
-    color: black;
-    background: #efefef;
+  color: black;
+  background: #efefef;
 }
-

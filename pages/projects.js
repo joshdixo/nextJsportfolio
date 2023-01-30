@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import styles from '../styles/Projects.module.scss';
 import Layout from '../components/Layout';
 import { useState } from 'react';
-import { StyleRegistry } from 'styled-jsx';
 import Divider from '../components/Divider';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -13,7 +12,7 @@ const projects = [
     title: 'The Collecting Group',
     img: '/images/projects/collectingcars-home.png',
     img2: '/images/projects/watchcollecting.png',
-    desc: 'Front-end Developer',
+    desc: 'Front End Developer',
     moreInfo: 'Expand',
     viewLink: '#',
     githubLink: '#',
@@ -140,6 +139,8 @@ const Projects = () => {
                     </motion.div>
 
                     <Divider />
+
+
                   </div>
                   :
                   <motion.div
@@ -156,8 +157,9 @@ const Projects = () => {
                         <p>{project.desc}</p>
 
                         <div className={styles.links}>
-                          <Link href={project.viewLink} target="_blank" className={styles.buttonPrimary}>View</Link>
                           <Link href={project.githubLink} target="_blank" className={styles.buttonSecondary}>GitHub</Link>
+                          <Link href={project.viewLink} target="_blank" className={styles.buttonPrimary}>View</Link>
+
                         </div>
                       </div>
                     </div>
