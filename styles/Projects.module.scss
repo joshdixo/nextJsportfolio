@@ -77,7 +77,7 @@
 
         &:hover {
           cursor: pointer;
-          background: darken($color: #FFDC34, $amount: 10%);
+          background: lighten($color: #FFDC34, $amount: 10%);
           transition: background .3s ease-out;
         }
       }
@@ -94,7 +94,7 @@
 
         &:hover {
           cursor: pointer;
-          background: darken($color: rgba(0, 0, 0, 0.055), $amount: 10%);
+          background: #FFDC34;
           transition: background .3s ease-out;
         }
       }

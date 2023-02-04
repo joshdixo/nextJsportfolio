@@ -35,7 +35,7 @@
   padding: 0 .6rem;
   // background: blue;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 0 auto;
 
   p {
     font-size: 1.4rem;
@@ -107,7 +107,17 @@
     }
   }
 
-  .about {
+
+}
+
+.fullBleed {
+  background: white;
+  margin-top: 18rem;
+
+  .tile {
+    position: relative;
+    top: -8rem;
+    margin: 0;
 
     .grid {
       display: grid;
@@ -117,7 +127,9 @@
       border-radius: 16px;
       box-shadow: 0 5px 5px 0 rgba(225, 225, 225, 0.301);
 
-      // border: 1px solid;
+      @include screen(mobile) {
+        grid-template-columns: 1fr;
+      }
 
       .gridCell {
 
@@ -137,6 +149,10 @@
             align-items: center;
             background: #FFDC34;
             display: flex;
+
+            span {
+              font-size: 3rem;
+            }
           }
 
           h5 {
@@ -150,5 +166,93 @@
         }
       }
     }
+  }
+
+  .about {
+    display: bloc;
+    margin: 0 auto;
+    padding-bottom: 8rem;
+    position: relative;
+    max-width: 70ch;
+    text-align: center;
+
+    @include screen(mobile) {
+      padding: 0 32px 8rem 32px;
+    }
+
+    p {
+      font-size: 1.8rem;
+
+      @include screen(mobile) {
+        font-size: 1.6rem;
+        margin: 32px 0;
+      }
+    }
+  }
+
+
+}
+
+.work {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 32px;
+
+    @include screen(mobile) {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .gridCell {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include screen(mobile) {
+        align-items: center;
+        text-align: center;
+      }
+
+      h2 {
+        margin: 0;
+      }
+
+      .buttonPrimary {
+        background: #FFDC34;
+        padding: .6rem 2rem;
+        border-radius: 16px;
+        font-weight: 700;
+        text-align: center;
+        width: fit-content;
+        margin-top: 8px;
+
+        &:hover {
+          cursor: pointer;
+          background: lighten($color: #FFDC34, $amount: 10%);
+          transition: background .3s ease-out;
+        }
+      }
+
+      &_project {
+        background: #FFDC34;
+        border-radius: 32px;
+
+        .imgWrapper {
+          max-height: 300px;
+          padding: 48px;
+          overflow: hidden;
+
+          img {
+            max-width: 100%;
+            border-radius: 16px;
+            box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 30%);
+          }
+        }
+      }
+    }
+
+
   }
 }

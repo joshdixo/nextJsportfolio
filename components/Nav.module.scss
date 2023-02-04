@@ -1,6 +1,5 @@
 .nav {
-  backdrop-filter: blur(8px);
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: white;
   border-radius: 100px;
   box-shadow: rgb(0 23 55 / 5%) 0px 4px 16px 0px;
   opacity: 1;
@@ -21,13 +20,13 @@
     border-radius: 50%;
     align-self: center;
 
-  
+
   }
 
   &Item {
     border-radius: 50%;
     color: black;
-  
+
     position: relative;
 
     a {
@@ -49,6 +48,7 @@
     &:first-child {
       margin-right: 8px;
       padding: 4px;
+
       a {
         padding: 0;
       }

@@ -46,6 +46,10 @@
     grid-auto-flow: column;
     gap: 1rem;
 
+    @include screen(mobile) {
+      grid-auto-flow: row;
+    }
+
     .input {
       -webkit-appearance: none;
       display: inline-block;
@@ -109,7 +113,7 @@
 
     &:hover {
       cursor: pointer;
-      background: darken($color: #FFDC34, $amount: 10%);
+      background: lighten($color: #FFDC34, $amount: 10%);
       transition: background .3s ease-out;
     }
   }
