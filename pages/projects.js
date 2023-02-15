@@ -21,10 +21,10 @@ const projects = [
   {
     id: 2,
     title: 'DevFinder',
-    img: '#',
-    desc: 'testing description',
-    viewLink: '#',
-    githubLink: '#',
+    img: '/images/projects/devfinder.png',
+    desc: 'NextJs project that utilises the GitHub api to find information about a particular username. The results of the search are dynamically rendered.',
+    viewLink: 'https://dev-finder-xi.vercel.app/',
+    githubLink: 'https://github.com/joshdixo/devFinder',
     isLatest: false
   },
   {

@@ -32,6 +32,19 @@
 }
 
 .form {
+
+  a {
+    border-radius: 10px;
+    padding: 6px;
+    background: #FFDC34;
+
+    &:hover {
+      cursor: pointer;
+      background: lighten($color: #FFDC34, $amount: 10%);
+      transition: background .3s ease-out;
+    }
+  }
+
   display: grid;
   grid-template-rows: max-content 1fr max-content;
   grid-template-columns: 1fr;
