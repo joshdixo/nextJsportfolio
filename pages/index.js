@@ -80,14 +80,13 @@ const Home = () => {
                     <div className={styles.title}>
                       <h3>Development</h3>
 
-                      <h5>Languages I speak:</h5>
-                      <p>HTML, JavaScript, PHP</p>
+                      <p>1.5 years of full-time commercial experience</p>
 
                       <h5>Working with:</h5>
                       <p>React</p>
                       <p>NextJs</p>
-                      <p>SCSS</p>
-                      <p>GitHub</p>
+                      <p>PHP</p>
+                      <p>& more</p>
                     </div>
                   </div>
                 </div>
@@ -100,9 +99,13 @@ const Home = () => {
                     <div className={styles.title}>
                       <h3>Photography</h3>
 
-                      <h5>Stats:</h5>
-                      <p>9+ years experience</p>
-                      <p>World Sports Photography Awards Finalist</p>
+                      <p>9+ years experience and World Sports Photography Awards Finalist</p>
+
+                      <h5>Clients include:</h5>
+                      <p>Nottingham Forest FC</p>
+                      <p>Wolverhampton Wanderers FC</p>
+                      <p>Southampton FC</p>
+                      <p>Nike Golf</p>
                     </div>
                   </div>
                 </div>
@@ -111,8 +114,9 @@ const Home = () => {
 
             <section className={styles.about}>
               <p>I'm a creative individual with a passion for photography and all things design.
-                Having worked with professional sports teams as a photographer for almost 10 years, lockdown
-                presented the perfect time and opportunity to learn new skills.
+                I have had the opportunity to work as a photographer for professional sports teams for nearly a decade.
+              </p>
+              <p className={styles.highlight}>When lockdown hit, I saw it as the perfect chance to learn new skills.
               </p>
               <p>Coding was something that had always intrigued me, and I now have a year of professional
                 experience as a full time Front End Developer.
@@ -126,25 +130,28 @@ const Home = () => {
           <div className={styles.container}>
             <div className={styles.grid}>
               <div className={styles.gridCell}>
-                <h2 className={styles.title}>
-                  Why not take a look at what I've been working on?
-                </h2>
-                <Link href="/projects" className={styles.buttonPrimary}>
-                  Projects
+                <Link href="/projects" className={styles.gridCell_project}>
+                  <span>Projects</span>
+
+                  <div className={styles.imgWrapper}>
+                    <img src="/images/projects/collectingcars-home.png" />
+                  </div>
                 </Link>
               </div>
 
-              <Link href="/projects" className={styles.gridCell_project}>
-                <div className={styles.imgWrapper}>
-                  <img src="/images/projects/collectingcars-home.png" />
-                </div>
-              </Link>
+              <div className={styles.gridCell}>
+                <Link href="/projects" className={styles.gridCell_project}>
+                  <span>Resume</span>
+
+                  <div className={styles.imgWrapper}>
+                    <img src="/documents/JoshDixonResume.png" />
+                  </div>
+                </Link>
+              </div>
+
             </div>
           </div>
         </section>
-
-
-
 
       </Layout>
     </>

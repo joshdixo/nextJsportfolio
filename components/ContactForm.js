@@ -29,8 +29,6 @@ const ContactForm = () => {
                 <div className={styles.topRow}>
 
                     <input className={styles.input} type="text" id="name" name="name" placeholder="Name" required="" value={name} onChange={(e) => setName(e.target.value)} />
-
-
                     <input className={styles.input} type="email" id="email" name="email" placeholder="Email" required="" value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
 

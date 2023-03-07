@@ -32,6 +32,11 @@
 }
 
 .form {
+  p {
+    @include screen(mobile) {
+      line-height: 1.7;
+    }
+  }
 
   a {
     border-radius: 10px;

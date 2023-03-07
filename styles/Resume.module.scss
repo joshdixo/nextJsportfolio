@@ -1,0 +1,126 @@
+// Media Queries
+@mixin screen($size) {
+    @if $size ==mobile {
+        @media (max-width: 599px) {
+            @content;
+        }
+    }
+
+    @else if $size ==tablet {
+        @media (min-width: 600px) {
+            @content;
+        }
+    }
+
+    @else if $size ==tabletAll {
+        @media (min-width: 900px) {
+            @content;
+        }
+    }
+
+    @else if $size ==desktopAll {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if $size ==ultraWide {
+        @media (min-width: 1800px) {
+            @content;
+        }
+    }
+}
+
+.work {
+    margin: 3em 0;
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        margin-bottom: 32px;
+        background: white;
+        border-radius: 2rem;
+        padding: 2rem;
+
+        @include screen(mobile) {
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        .gridCell {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @include screen(mobile) {
+                align-items: center;
+                text-align: center;
+            }
+
+            .textWrapper {
+                padding: 0 3rem;
+            }
+
+            .buttonPrimary {
+                background: #FFDC34;
+                padding: .6rem 1rem;
+                border-radius: 16px;
+                font-weight: 700;
+                text-align: center;
+                width: 12rem;
+                height: 100%;
+                line-height: 2.9rem;
+
+                &:hover {
+                    cursor: pointer;
+                    background: lighten($color: #FFDC34, $amount: 10%);
+                    transition: background .3s ease-out;
+                }
+            }
+
+            .buttonSecondary {
+                background: white;
+                padding: .6rem 1rem;
+                border-radius: 16px;
+                font-weight: 700;
+                border: 2px solid #FFDC34;
+                width: 12rem;
+                text-align: center;
+                margin-right: 1rem;
+
+                &:hover {
+                    cursor: pointer;
+                    background: lighten($color: #FFDC34, $amount: 10%);
+                    transition: all .3s ease-out;
+                }
+            }
+
+            &_project {
+                background: #FFDC34;
+                border-radius: 32px;
+
+                .imgWrapper {
+                    max-height: 300px;
+                    padding: 48px;
+                    overflow: hidden;
+
+                    img {
+                        max-width: 100%;
+                        border-radius: 16px;
+                        box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 30%);
+                    }
+                }
+            }
+
+            .buttonWrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+        }
+
+
+    }
+}

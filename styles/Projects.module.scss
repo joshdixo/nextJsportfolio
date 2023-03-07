@@ -68,12 +68,12 @@
 
       .buttonPrimary {
         background: #FFDC34;
-        padding: .6rem 2rem;
+        padding: .6rem 1rem;
         border-radius: 16px;
         font-weight: 700;
-        // margin-right: 1rem;
         width: 100%;
         text-align: center;
+        line-height: 2.9rem;
 
         &:hover {
           cursor: pointer;
@@ -87,15 +87,15 @@
         padding: .6rem 1rem;
         border-radius: 16px;
         font-weight: 700;
-        outline: 2px solid #FFDC34;
+        border: 2px solid #FFDC34;
         width: 100%;
         text-align: center;
 
 
         &:hover {
           cursor: pointer;
-          background: #FFDC34;
-          transition: background .3s ease-out;
+          background: lighten($color: #FFDC34, $amount: 10%);
+          transition: all .3s ease-out;
         }
       }
     }
@@ -121,6 +121,8 @@
     padding: 2rem;
     text-align: left;
     justify-content: center;
+    background: #FFDC34;
+
 
     @include screen(mobile) {
       text-align: center;
@@ -152,15 +154,6 @@
 
   }
 
-  // &::before {
-  //   content: '';
-  //   background-image: url(/public/images/projects/collectingcars.png);
-  //   position: absolute;
-  //   width: 1000px;
-  //   height: 40px;
-  //   z-index: 5;
-  // }
-
   .moreInfoWrapper {
     z-index: 5;
     position: relative;
@@ -178,6 +171,12 @@
         text-decoration: underline;
       }
     }
+
+    li {
+      @include screen(mobile) {
+        font-size: 1.4rem;
+      }
+    }
   }
 
   .cta {
@@ -193,6 +192,7 @@
     box-shadow: rgb(0 23 55 / 5%) 0px 4px 16px 0px;
     padding: .5rem 1rem;
     border-radius: 16px;
+    line-height: 1.3rem;
 
     &:hover {
       cursor: pointer;

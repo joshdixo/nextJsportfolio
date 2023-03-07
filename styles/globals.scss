@@ -99,12 +99,7 @@ section {
 }
 
 .main {
-  //min-height: 100vh;
   padding: 4rem 0;
-  // flex: 1;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
 
   h1 {
     font-size: 5rem;
@@ -124,7 +119,7 @@ section {
       height: 64px;
       width: 8px;
       background: #FFDC34;
-      bottom: 0px;
+      bottom: 4px;
       left: 0;
       border-radius: 4px;
 
@@ -133,6 +128,15 @@ section {
         bottom: 6px;
         left: -16px;
       }
+    }
+  }
+
+  h2 {
+    @include screen(mobile) {
+      margin: 1rem auto;
+      font-size: 3rem;
+      padding: 0;
+      text-align: center;
     }
   }
 }

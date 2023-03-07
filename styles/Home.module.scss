@@ -78,7 +78,8 @@
 
       @include screen(mobile) {
         text-align: center;
-        padding: 0 2rem;
+        padding: 2rem;
+        font-size: 2.3rem;
       }
     }
 
@@ -106,8 +107,6 @@
       }
     }
   }
-
-
 }
 
 .fullBleed {
@@ -173,7 +172,7 @@
     margin: 0 auto;
     padding-bottom: 8rem;
     position: relative;
-    max-width: 70ch;
+    max-width: 52ch;
     text-align: center;
 
     @include screen(mobile) {
@@ -188,6 +187,13 @@
         margin: 32px 0;
       }
     }
+
+    .highlight {
+      background-color: #efefef;
+      padding: 2rem;
+      border-radius: 1rem;
+      margin: 4rem 0;
+    }
   }
 
 
@@ -197,12 +203,12 @@
   .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+    gap: 80px 42px;
     margin-bottom: 32px;
 
     @include screen(mobile) {
       grid-template-columns: 1fr;
-      gap: 32px;
+      gap: 42px;
     }
 
     .gridCell {
@@ -221,7 +227,7 @@
 
       .buttonPrimary {
         background: #FFDC34;
-        padding: .6rem 2rem;
+        padding: .6rem 3rem;
         border-radius: 16px;
         font-weight: 700;
         text-align: center;
@@ -235,12 +241,38 @@
         }
       }
 
+      .buttonSecondary {
+        background: white;
+        padding: .6rem 1rem;
+        border-radius: 16px;
+        font-weight: 700;
+        border: 2px solid #FFDC34;
+        width: fit-content;
+        text-align: center;
+
+
+        &:hover {
+          cursor: pointer;
+          background: lighten($color: #FFDC34, $amount: 10%);
+          transition: all .3s ease-out;
+        }
+      }
+
       &_project {
         background: #FFDC34;
         border-radius: 32px;
 
+        span {
+          display: block;
+          text-align: center;
+          font-weight: 700;
+          font-size: 2rem;
+          position: relative;
+          top: 2.6rem;
+        }
+
         .imgWrapper {
-          max-height: 300px;
+          height: 210px;
           padding: 48px;
           overflow: hidden;
 

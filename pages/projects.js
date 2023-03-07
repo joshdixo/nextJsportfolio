@@ -22,7 +22,7 @@ const projects = [
     id: 2,
     title: 'DevFinder',
     img: '/images/projects/devfinder.png',
-    desc: 'NextJs project that utilises the GitHub api to find information about a particular username. The results of the search are dynamically rendered.',
+    desc: 'NextJs project that utilises the GitHub API to find information about a particular username. The results of the search are dynamically rendered.',
     viewLink: 'https://dev-finder-xi.vercel.app/',
     githubLink: 'https://github.com/joshdixo/devFinder',
     isLatest: false
@@ -50,10 +50,6 @@ const projects = [
 const Projects = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // const featured = {
-  //   whileHover: { opacity: 1 }
-  // }
-
   const imgMotion = {
     rest: { opacity: 1, duration: 0.2, type: "spring", x: 0, y: 0 },
     hover: {
@@ -76,7 +72,7 @@ const Projects = () => {
           <h1>Latest Work</h1>
 
 
-          <div className="grid">
+          <div className="grid" style={{ marginTop: 42 }}>
             {projects.map((project) => {
               return (
 
@@ -115,12 +111,12 @@ const Projects = () => {
                                 Watch Collecting
                               </Link>
                               &nbsp;are the two online auction
-                              platforms that I have worked.
+                              platforms that I have worked on.
                             </p>
                             <p>From design through to implimentation, I have worked on a variety of features accross the two sites during my tenure including:</p>
                             <ul>
-                              <li>Navigation</li>
-                              <li>Auction cards</li>
+                              <li>Responsive navigation</li>
+                              <li>Listing cards</li>
                               <li>Policy pages</li>
                               <li>Landing pages</li>
                             </ul>
@@ -139,6 +135,7 @@ const Projects = () => {
                     </motion.div>
 
                     <Divider />
+                    <h2>Personal Projects</h2>
 
 
                   </div>
