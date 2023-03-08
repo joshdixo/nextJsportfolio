@@ -1,3 +1,36 @@
+// Media Queries
+@mixin screen($size) {
+    @if $size ==mobile {
+        @media (max-width: 599px) {
+            @content;
+        }
+    }
+
+    @else if $size ==tablet {
+        @media (min-width: 600px) {
+            @content;
+        }
+    }
+
+    @else if $size ==tabletAll {
+        @media (min-width: 900px) {
+            @content;
+        }
+    }
+
+    @else if $size ==desktopAll {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if $size ==ultraWide {
+        @media (min-width: 1800px) {
+            @content;
+        }
+    }
+}
+
 .footer {
     margin-bottom: 2rem;
 
@@ -6,12 +39,21 @@
         flex-direction: row;
         justify-content: center;
 
+        @include screen (mobile) {
+            flex-flow: wrap;
+        }
+
         a {
             padding: 1rem 2rem;
             margin: 0 1rem;
             font-size: 1.6rem;
             font-weight: 600;
             border-radius: 2rem;
+
+            @include screen (mobile) {
+                padding: 1rem;
+                margin: 0 .1rem;
+            }
 
             &:hover {
                 background: darken($color: #efefef, $amount: 10%);
