@@ -5,6 +5,19 @@ import styles from '../styles/Resume.module.scss';
 import Link from "next/link";
 
 const Resume = () => {
+
+    const imgMotion = {
+        rest: { opacity: 1, duration: 0.2, type: "spring", x: 0, y: 0, scale: 1 },
+        hover: {
+            opacity: 1,
+            y: -20,
+            scale: 1.04,
+            transition: {
+                duration: 0.2
+            }
+        }
+    };
+
     return (
         <>
             <Head>
@@ -32,9 +45,9 @@ const Resume = () => {
                                 </div>
 
                                 <Link href="/documents/JoshDixonResume.pdf" target="_blank" className={styles.gridCell_project}>
-                                    <div className={styles.imgWrapper}>
+                                    <motion.div variants={imgMotion} layout="position" className={styles.imgWrapper} initial="rest" whileHover="hover" animate="rest">
                                         <img src="/documents/JoshDixonResume.png" />
-                                    </div>
+                                    </motion.div>
                                 </Link>
                             </div>
                         </div>

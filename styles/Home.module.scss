@@ -71,6 +71,17 @@
       margin-bottom: 0;
     }
 
+    .wave {
+      position: absolute;
+      font-size: inherit;
+      margin-left: 1rem;
+
+      @include screen(mobile) {
+        top: -4rem;
+        right: -1.6rem;
+      }
+    }
+
     p {
       font-size: 3rem;
       line-height: 1.2;
@@ -168,7 +179,7 @@
   }
 
   .about {
-    display: bloc;
+    display: block;
     margin: 0 auto;
     padding-bottom: 8rem;
     position: relative;
@@ -261,6 +272,8 @@
       &_project {
         background: #FFDC34;
         border-radius: 32px;
+        height: 260px;
+        overflow: hidden;
 
         span {
           display: block;
@@ -272,7 +285,7 @@
         }
 
         .imgWrapper {
-          height: 210px;
+
           padding: 48px;
           overflow: hidden;
 

@@ -99,9 +99,10 @@
             &_project {
                 background: #FFDC34;
                 border-radius: 32px;
+                height: 300px;
+                overflow: hidden;
 
                 .imgWrapper {
-                    max-height: 300px;
                     padding: 48px;
                     overflow: hidden;
 

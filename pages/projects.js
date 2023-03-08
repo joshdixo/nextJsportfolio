@@ -1,7 +1,8 @@
-import { motion } from 'framer-motion';
+import { useAnimation, motion } from 'framer-motion'
+import { useInView } from "react-intersection-observer";
 import styles from '../styles/Projects.module.scss';
 import Layout from '../components/Layout';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Divider from '../components/Divider';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -49,6 +50,21 @@ const projects = [
 
 const Projects = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
+  const reveal = {
+    visible: { opacity: 1, y: 0, transition: { duration: .3 } },
+    hidden: { opacity: 0, y: 80 },
+  }
 
   const imgMotion = {
     rest: { opacity: 1, duration: 0.2, type: "spring", x: 0, y: 0 },
@@ -71,24 +87,20 @@ const Projects = () => {
         <div className="container">
           <h1>Latest Work</h1>
 
-
           <div className="grid" style={{ marginTop: 42 }}>
             {projects.map((project) => {
               return (
 
                 (project.isLatest === true) ?
-                  <div className="grid__cell">
+                  <div className="grid__cell" key={project.id}>
                     <motion.div
                       className={styles.featured}
                       onClick={() => setIsOpen(!isOpen)}
-                      // variants={featured}
-                      // initial={{opacity: 0.8}}
-                      // animate={featured}
-                      // whileHover={{opacity: 1}}
                       layout
                       whileTap={{ scale: 0.990 }}
-
-                      initial="rest" whileHover="hover" animate="rest"
+                      initial="rest"
+                      whileHover="hover"
+                      animate="rest"
                     >
                       <motion.div variants={imgMotion} layout="position" className={styles.edgeImage}>
                         <motion.img src={project.img} />
@@ -101,7 +113,6 @@ const Projects = () => {
                       {isOpen &&
                         <motion.div >
                           <div className={styles.moreInfoWrapper}>
-                            {/* <h5>Title</h5> */}
                             <p>
                               <Link href="https://collectingcars.com" target="_blank" rel="noreferrer">
                                 Collecting Cars
@@ -126,8 +137,6 @@ const Projects = () => {
 
                           </div>
                         </motion.div>
-
-
                       }
 
                       {isOpen ? <motion.div className={styles.cta}>Collapse ☝️</motion.div> :
@@ -143,7 +152,6 @@ const Projects = () => {
                   <motion.div
                     className="grid__cell"
                     key={project.id}
-                  // whileHover={{ scale: 1.005 }}
                   >
                     <div className={styles.card}>
                       <div className={styles.image}>
