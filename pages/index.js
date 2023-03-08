@@ -1,13 +1,42 @@
+import React, { useEffect } from "react";
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
-import { motion } from 'framer-motion'
+import { useAnimation, motion } from 'framer-motion'
+import { useInView } from "react-intersection-observer";
 import Layout from '../components/Layout'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import Divider from '../components/Divider'
 
 const Home = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
+  const reveal = {
+    visible: { opacity: 1, y: 0, transition: { duration: .3 } },
+    hidden: { opacity: 0, y: 80 },
+  }
+
+  const imgMotion = {
+    rest: { opacity: 1, duration: 0.2, type: "spring", x: 0, y: 0 },
+    hover: {
+      opacity: 1,
+      y: -50,
+      transition: {
+        duration: 0.2
+      }
+    }
+  };
+
   return (
     <>
       <Head>
@@ -16,7 +45,21 @@ const Home = () => {
       <Layout>
         <div className={styles.container}>
           <section className={styles.introduction}>
-            <h1>Hello, I'm Josh 👋</h1>
+            <h1>
+              Hello, I'm Josh
+              <motion.span
+                animate={{
+                  rotate: [0, 25, -10, 25, -10, 25, 0],
+                  transformOrigin: "bottom right",
+                  transition: {
+                    duration: 2.4,
+                  }
+                }}
+                className={styles.wave}
+              >
+                👋
+              </motion.span>
+            </h1>
             <p>I'm a Front End Developer moving from 🇬🇧 to 🇨🇦 in April '23 and I'm searching for my next challenge.
             </p>
 
@@ -126,32 +169,37 @@ const Home = () => {
           </div>
         </div>
 
-        <section className={styles.work}>
+        <motion.section
+          ref={ref}
+          animate={controls}
+          initial="hidden"
+          variants={reveal}
+          className={styles.work}>
           <div className={styles.container}>
             <div className={styles.grid}>
-              <div className={styles.gridCell}>
+              <motion.div layout="position" className={styles.gridCell}>
                 <Link href="/projects" className={styles.gridCell_project}>
                   <span>Projects</span>
 
-                  <div className={styles.imgWrapper}>
+                  <motion.div variants={imgMotion} layout="position" className={styles.imgWrapper} initial="rest" whileHover="hover" animate="rest">
                     <img src="/images/projects/collectingcars-home.png" />
-                  </div>
+                  </motion.div>
                 </Link>
-              </div>
+              </motion.div>
 
               <div className={styles.gridCell}>
                 <Link href="/projects" className={styles.gridCell_project}>
                   <span>Resume</span>
 
-                  <div className={styles.imgWrapper}>
+                  <motion.div variants={imgMotion} layout="position" className={styles.imgWrapper} initial="rest" whileHover="hover" animate="rest">
                     <img src="/documents/JoshDixonResume.png" />
-                  </div>
+                  </motion.div>
                 </Link>
               </div>
 
             </div>
           </div>
-        </section>
+        </motion.section>
 
       </Layout>
     </>
