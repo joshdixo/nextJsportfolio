@@ -182,7 +182,7 @@ const Home = () => {
                   <span>Projects</span>
 
                   <motion.div variants={imgMotion} layout="position" className={styles.imgWrapper} initial="rest" whileHover="hover" animate="rest">
-                    <img src="/images/projects/collectingcars-home.png" />
+                    <img src="/images/projects/collectingcars-home.png" alt="Collecting Cars Website" />
                   </motion.div>
                 </Link>
               </motion.div>
@@ -192,7 +192,7 @@ const Home = () => {
                   <span>Resume</span>
 
                   <motion.div variants={imgMotion} layout="position" className={styles.imgWrapper} initial="rest" whileHover="hover" animate="rest">
-                    <img src="/documents/JoshDixonResume.png" />
+                    <img src="/documents/JoshDixonResume.png" alt="Resume" />
                   </motion.div>
                 </Link>
               </div>
