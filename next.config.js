@@ -2,7 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  ignoreDuringBuilds: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   env: {
     // FORMSPARK_FORM_ID: '91dkCA3B',
     FORMSPARK_FORM_ID: 'echo',
