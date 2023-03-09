@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useFormspark } from "@formspark/use-formspark";
 import styles from './ContactForm.module.scss';
 
-
 const ContactForm = () => {
     const [submit, submitting] = useFormspark({
         formId: process.env.FORMSPARK_FORM_ID,
@@ -15,10 +14,7 @@ const ContactForm = () => {
     const onSubmit = async (e) => {
         e.preventDefault();
         await submit({ name, email, message });
-        alert("Form submitted");
-        console.log(name)
-        console.log(email)
-        console.log(message)
+        alert("Form submitted!");
     };
 
     return (
