@@ -161,7 +161,7 @@ const Home = () => {
               </p>
               <p className={styles.highlight}>When lockdown hit, I saw it as the perfect chance to learn new skills.
               </p>
-              <p>Coding was something that had always intrigued me, and I now have a year of professional
+              <p>Coding was something that had always intrigued me, and I now have over a year of professional
                 experience as a full time Front End Developer.
               </p>
             </section>
@@ -188,7 +188,7 @@ const Home = () => {
               </motion.div>
 
               <div className={styles.gridCell}>
-                <Link href="/projects" className={styles.gridCell_project}>
+                <Link href="/resume" className={styles.gridCell_project}>
                   <span>Resume</span>
 
                   <motion.div variants={imgMotion} layout="position" className={styles.imgWrapper} initial="rest" whileHover="hover" animate="rest">

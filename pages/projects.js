@@ -32,20 +32,20 @@ const projects = [
     id: 3,
     title: 'Expenses Tracker',
     img: '/images/projects/expensetracker.png',
-    desc: 'Built using React, this web app allows you to add expenses by date and this will organise the data for you. This data is presented in the form of a card and also in a chart which can be filtered by the year.',
+    desc: 'React Js peoject allows you to add expenses by date and this will organise the data for you. This data is presented in the form of a card and also in a chart which can be filtered by the year.',
     viewLink: 'https://joshdixo.github.io/expenses-tracker/',
     githubLink: 'https://github.com/joshdixo/expenses-tracker',
     isLatest: false
   },
-  {
-    id: 4,
-    title: 'Password Generator',
-    img: '/images/projects/passwordgenerator.png',
-    desc: 'This web app was developed using HTML, CSS, JavaScript and the fontawesome CDN. The generated password can be copied to your clipboard using the icon and displays an alert.',
-    viewLink: 'https://objective-lichterman-5f786c.netlify.app/',
-    githubLink: 'https://github.com/joshdixo/RandomPasswordGenerator',
-    isLatest: false
-  }
+  // {
+  //   id: 4,
+  //   title: 'Password Generator',
+  //   img: '/images/projects/passwordgenerator.png',
+  //   desc: 'This web app was developed using HTML, CSS, JavaScript and the fontawesome CDN. The generated password can be copied to your clipboard using the icon and displays an alert.',
+  //   viewLink: 'https://objective-lichterman-5f786c.netlify.app/',
+  //   githubLink: 'https://github.com/joshdixo/RandomPasswordGenerator',
+  //   isLatest: false
+  // }
 ];
 
 const Projects = () => {
