@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
-import { useAnimation, motion } from 'framer-motion'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.scss";
+import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Layout from '../components/Layout'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Link from 'next/link'
-import Divider from '../components/Divider'
+import Layout from "../components/Layout";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
+import Divider from "../components/Divider";
 
 const Home = () => {
   const controls = useAnimation();
@@ -22,9 +22,9 @@ const Home = () => {
   }, [controls, inView]);
 
   const reveal = {
-    visible: { opacity: 1, y: 0, transition: { duration: .3 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
     hidden: { opacity: 0, y: 80 },
-  }
+  };
 
   const imgMotion = {
     rest: { opacity: 1, duration: 0.2, type: "spring", x: 0, y: 0 },
@@ -32,9 +32,9 @@ const Home = () => {
       opacity: 1,
       y: -50,
       transition: {
-        duration: 0.2
-      }
-    }
+        duration: 0.2,
+      },
+    },
   };
 
   return (
@@ -53,42 +53,35 @@ const Home = () => {
                   transformOrigin: "bottom right",
                   transition: {
                     duration: 2.4,
-                  }
+                  },
                 }}
                 className={styles.wave}
               >
                 👋
               </motion.span>
             </h1>
-            <p>I'm a Front End Developer moving from 🇬🇧 to 🇨🇦 in April '23 and I'm searching for my next challenge.
+            <p>
+              I'm a Front End Developer who has reloacted from 🇬🇧 to 🇨🇦 and I'm
+              searching for my next challenge.
             </p>
 
             <div className={styles.links}>
               <Link href={"https://linkedin.com/in/joshdixon"} target="_blank">
-                <FontAwesomeIcon
-                  icon={["fab", "linkedin"]}
-                />
+                <FontAwesomeIcon icon={["fab", "linkedin"]} />
               </Link>
 
               <Link href={"https://github.com/joshdixo"} target="_blank">
-                <FontAwesomeIcon
-                  icon={["fab", "github"]}
-                />
+                <FontAwesomeIcon icon={["fab", "github"]} />
               </Link>
 
               <Link href={"https://twitter.com/joshdixonphoto"} target="_blank">
-                <FontAwesomeIcon
-                  icon={["fab", "twitter"]}
-                />
+                <FontAwesomeIcon icon={["fab", "twitter"]} />
               </Link>
 
               <Link href={"https://behance.net/joshdixonphoto"} target="_blank">
-                <FontAwesomeIcon
-                  icon={["fab", "behance"]}
-                />
+                <FontAwesomeIcon icon={["fab", "behance"]} />
               </Link>
             </div>
-
           </section>
         </div>
 
@@ -142,7 +135,10 @@ const Home = () => {
                     <div className={styles.title}>
                       <h3>Photography</h3>
 
-                      <p>9+ years experience and World Sports Photography Awards Finalist</p>
+                      <p>
+                        9+ years experience and World Sports Photography Awards
+                        Finalist
+                      </p>
 
                       <h5>Clients include:</h5>
                       <p>Nottingham Forest FC</p>
@@ -156,16 +152,21 @@ const Home = () => {
             </section>
 
             <section className={styles.about}>
-              <p>I'm a creative individual with a passion for photography and all things design.
-                I have had the opportunity to work as a photographer for professional sports teams for nearly a decade.
+              <p>
+                I'm a creative individual with a passion for photography and all
+                things design. I have had the opportunity to work as a
+                photographer for professional sports teams for nearly a decade.
               </p>
-              <p className={styles.highlight}>When lockdown hit, I saw it as the perfect chance to learn new skills.
+              <p className={styles.highlight}>
+                When lockdown hit, I saw it as the perfect chance to learn new
+                skills.
               </p>
-              <p>Coding was something that had always intrigued me, and I now have over a year of professional
-                experience as a full time Front End Developer.
+              <p>
+                Coding was something that had always intrigued me, and I now
+                have over a year of professional experience as a full time Front
+                End Developer.
               </p>
             </section>
-
           </div>
         </div>
 
@@ -174,15 +175,26 @@ const Home = () => {
           animate={controls}
           initial="hidden"
           variants={reveal}
-          className={styles.work}>
+          className={styles.work}
+        >
           <div className={styles.container}>
             <div className={styles.grid}>
               <motion.div layout="position" className={styles.gridCell}>
                 <Link href="/projects" className={styles.gridCell_project}>
                   <span>Projects</span>
 
-                  <motion.div variants={imgMotion} layout="position" className={styles.imgWrapper} initial="rest" whileHover="hover" animate="rest">
-                    <img src="/images/projects/collectingcars-home.png" alt="Collecting Cars Website" />
+                  <motion.div
+                    variants={imgMotion}
+                    layout="position"
+                    className={styles.imgWrapper}
+                    initial="rest"
+                    whileHover="hover"
+                    animate="rest"
+                  >
+                    <img
+                      src="/images/projects/collectingcars-home.png"
+                      alt="Collecting Cars Website"
+                    />
                   </motion.div>
                 </Link>
               </motion.div>
@@ -191,19 +203,24 @@ const Home = () => {
                 <Link href="/resume" className={styles.gridCell_project}>
                   <span>Resume</span>
 
-                  <motion.div variants={imgMotion} layout="position" className={styles.imgWrapper} initial="rest" whileHover="hover" animate="rest">
+                  <motion.div
+                    variants={imgMotion}
+                    layout="position"
+                    className={styles.imgWrapper}
+                    initial="rest"
+                    whileHover="hover"
+                    animate="rest"
+                  >
                     <img src="/documents/JoshDixonResume.png" alt="Resume" />
                   </motion.div>
                 </Link>
               </div>
-
             </div>
           </div>
         </motion.section>
-
       </Layout>
     </>
-  )
-}
+  );
+};
 
 export default Home;
