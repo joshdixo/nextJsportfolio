@@ -158,13 +158,13 @@ const Home = () => {
                 photographer for professional sports teams for nearly a decade.
               </p>
               <p className={styles.highlight}>
-                When lockdown hit, I saw it as the perfect chance to learn new
-                skills.
+                When the gloabal pandemic hit, I saw it as the perfect chance to
+                learn new skills.
               </p>
               <p>
                 Coding was something that had always intrigued me, and I now
-                have over a year of professional experience as a full time Front
-                End Developer.
+                have almost 2 years of professional experience as a full time
+                Web Developer.
               </p>
             </section>
           </div>

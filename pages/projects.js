@@ -103,7 +103,7 @@ const Projects = () => {
                       animate="rest"
                     >
                       <motion.div variants={imgMotion} layout="position" className={styles.edgeImage}>
-                        <motion.img src={project.img} />
+                        <motion.img src={project.img} alt="collectingcars.com homepage"/>
                       </motion.div>
                       <div className={styles.infoWrapper}>
                         <motion.h3 layout="position">{project.title}</motion.h3>
