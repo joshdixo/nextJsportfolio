@@ -1,16 +1,10 @@
-# ci.yml file
-...
-- name: Run Cypress 🌲
-  uses: cypress-io/github-action@v2
+name: Run Cypress 🌲
+  uses: cypress-io/github-action@v5
   env:
     CYPRESS_BASE_URL: ${{ github.event.deployment_status.target_url }}
 
-# https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#job-status-check-functions
-- name: Cypress tests ✅
+name: Cypress tests ✅
   if: ${{ success() }}
-  # set the merge commit status check
-  # using GitHub REST API
-  # see https://docs.github.com/en/rest/reference/repos#create-a-commit-status
   run: |
     curl --request POST \
     --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
@@ -22,7 +16,7 @@
       "description": "Cypress tests passed"
     }'
 
-- name: Cypress tests 🚨
+name: Cypress tests 🚨
   if: ${{ failure() }}
   run: |
     curl --request POST \
