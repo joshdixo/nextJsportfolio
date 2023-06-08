@@ -26,7 +26,7 @@ const Nav = () => {
     <div className={styles.nav}>
       <LayoutGroup>
         {links.map((link) => (
-          <div className={styles.navItem} key={link.id}>
+          <div className={styles.navItem} key={link.id} data-cy='nav'>
             <Link href={link.href} scroll={false}>
               {link.href === path && (
                 <motion.span layoutId="bg" className={styles.active} />

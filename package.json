@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cy:open": "npx cypress open",
+    "cypress": "start-server-and-test dev http://localhost:3000 cy:open"
   },
   "dependencies": {
     "@formspark/use-formspark": "^0.1.39",
@@ -20,9 +22,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.4.3",
-    "sass": "^1.55.0"
+    "sass": "^1.55.0",
+    "start-server-and-test": "^2.0.0"
   },
   "devDependencies": {
+    "cypress": "^12.13.0",
     "eslint": "8.25.0",
     "eslint-config-next": "^13.0.5"
   }

@@ -50,7 +50,7 @@ const ContactForm = () => {
 
         <textarea
           className={styles.input}
-          id="messgae"
+          id="message"
           name="message"
           placeholder="Your message"
           required=""
