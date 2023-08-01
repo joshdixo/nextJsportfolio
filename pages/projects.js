@@ -13,7 +13,7 @@ const projects = [
     title: 'The Collecting Group',
     img: '/images/projects/collectingcars-home.png',
     img2: '/images/projects/watchcollecting.png',
-    desc: 'Front End Developer',
+    desc: 'Full Stack Developer',
     moreInfo: 'Expand',
     viewLink: '#',
     githubLink: '#',
@@ -103,7 +103,7 @@ const Projects = () => {
                       animate="rest"
                     >
                       <motion.div variants={imgMotion} layout="position" className={styles.edgeImage}>
-                        <motion.img src={project.img} alt="collectingcars.com homepage"/>
+                        <motion.img src={project.img} alt="collectingcars.com homepage" />
                       </motion.div>
                       <div className={styles.infoWrapper}>
                         <motion.h3 layout="position">{project.title}</motion.h3>
@@ -124,12 +124,12 @@ const Projects = () => {
                               &nbsp;are the two online auction
                               platforms that I have worked on.
                             </p>
-                            <p>From design through to implimentation, I have worked on a variety of features accross the two sites during my tenure including:</p>
+                            <p>From design through to implimentation and QA, I have worked on a variety of features accross the two sites during my tenure including:</p>
                             <ul>
                               <li>Responsive navigation</li>
                               <li>Listing cards</li>
                               <li>Policy pages</li>
-                              <li>Landing pages</li>
+                              <li>Country specific landing pages</li>
                             </ul>
 
                             <p>
