@@ -61,7 +61,7 @@ const Home = () => {
               </motion.span>
             </h1>
             <p>
-              I'm a Front End Developer who has reloacted from 🇬🇧 to 🇨🇦 and I'm
+              I'm a Full Stack Developer who has reloacted from 🇬🇧 to 🇨🇦 and I'm
               searching for my next challenge.
             </p>
 
@@ -98,12 +98,13 @@ const Home = () => {
                       <h3>Design</h3>
 
                       <h5>Things I enjoy designing:</h5>
-                      <p>UX, UI, Web, Apps</p>
+                      <p>UX, UI, Web, Apps, Social posts</p>
 
                       <h5>Design Tools:</h5>
                       <p>Figma</p>
                       <p>Photoshop</p>
                       <p>Illustrator</p>
+                      <p>InDesign</p>
                     </div>
                   </div>
                 </div>
@@ -114,7 +115,7 @@ const Home = () => {
                       <span>🧑‍💻</span>
                     </div>
                     <div className={styles.title}>
-                      <h3>Development</h3>
+                      <h3>Development & QA</h3>
 
                       <p>1.5 years of full-time commercial experience</p>
 
@@ -122,6 +123,7 @@ const Home = () => {
                       <p>React</p>
                       <p>NextJs</p>
                       <p>PHP</p>
+                      <p>Cypress</p>
                       <p>& more</p>
                     </div>
                   </div>
@@ -159,12 +161,11 @@ const Home = () => {
               </p>
               <p className={styles.highlight}>
                 When the gloabal pandemic hit, I saw it as the perfect chance to
-                learn new skills.
+                learn new skills and dive into the tech space full time.
               </p>
               <p>
                 Coding was something that had always intrigued me, and I now
-                have almost 2 years of professional experience as a full time
-                Web Developer.
+                have almost 2 years of professional experience in various aspects of the development lifecycle.
               </p>
             </section>
           </div>
