@@ -21,6 +21,24 @@ const projects = [
   },
   {
     id: 2,
+    title: 'joshdixonphoto.com',
+    img: '/images/projects/joshdixonphoto-home.png',
+    desc: 'Photography portfolio built with Nextjs. Utilising Contenful to store and manage content accross the website, along with the app router and reusable components to create consistancy across pages and content.',
+    viewLink: 'https://joshdixonphoto.com/',
+    githubLink: '/404',
+    isLatest: false
+  },
+  {
+    id: 3,
+    title: 'stickcheck.co',
+    img: '/images/projects/stickCheckOg.png',
+    desc: 'Website built using NextJs with firebase for user auth and database management. Originally built as a comparison tool for ice ockey sticks and now allows users to to be noified of their ice hockey stick warranty expiration.',
+    viewLink: 'https://stickcheck.co/',
+    githubLink: '/404',
+    isLatest: false
+  },
+  {
+    id: 4,
     title: 'DevFinder',
     img: '/images/projects/devfinder.png',
     desc: 'NextJs project that utilises the GitHub API to find information about a particular username. The results of the search are dynamically rendered.',
@@ -29,7 +47,7 @@ const projects = [
     isLatest: false
   },
   {
-    id: 3,
+    id: 5,
     title: 'Expenses Tracker',
     img: '/images/projects/expensetracker.png',
     desc: 'React Js peoject allows you to add expenses by date and this will organise the data for you. This data is presented in the form of a card and also in a chart which can be filtered by the year.',
