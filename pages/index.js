@@ -61,7 +61,7 @@ const Home = () => {
               </motion.span>
             </h1>
             <p>
-              I'm a Full Stack Developer who has reloacted from 🇬🇧 to 🇨🇦 and I'm
+              I'm a Full Stack Developer and I'm
               searching for my next challenge.
             </p>
 
